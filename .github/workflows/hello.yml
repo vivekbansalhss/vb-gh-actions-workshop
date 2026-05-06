@@ -9,10 +9,12 @@ jobs:
     steps:
       - name: Greet the User
         run: echo "Hello World!"
- steps:
-  - name: Greet the User
-    run: echo "Hello World!"
-  # List all files in the current directory for comparison before and after actions/checkout@v5.
-  - run: ls -l
-  - uses: actions/checkout@v5
-  - run: ls -l
+
+      # List all files before checkout
+      - run: ls -l
+
+      # Checkout the repository
+      - uses: actions/checkout@v5
+
+      # List all files after checkout
+      - run: ls -l
