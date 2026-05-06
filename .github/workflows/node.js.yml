@@ -35,3 +35,5 @@ jobs:
     - run: npm test
     - name: Vitest Coverage Report
       uses: davelosert/vitest-coverage-report-action@v2.11.2
+      with:
+        vite-config-path: vite.config.ts
