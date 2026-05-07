@@ -63,3 +63,6 @@ jobs:
         with:
           name: test-log-${{ matrix.os }}-${{ matrix.node }}
       - run: echo "Deploying to production"
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
